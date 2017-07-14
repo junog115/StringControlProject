@@ -29,6 +29,9 @@ int main() {
     cout << endl << "char* 형 변환자" << endl;
     TestFunc(strData);
 
+    cout << endl << "Conversion constructor" << endl;
+    // TestFunc("Hello!!"); have to error
+    TestFunc(CMyString("Hello!"));
 
     cout << endl << "main() end!" << endl;
 
