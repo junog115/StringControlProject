@@ -37,5 +37,5 @@ My first C++ project
 
 ------------------------------------------
 ### main 함수 모습 & 실행 결과 
-<img src="https://user-images.githubusercontent.com/18415304/28200003-70f6bcae-68a4-11e7-8b71-de7a72168693.png" width="50%">
+<img src="https://user-images.githubusercontent.com/18415304/28204579-80ce846c-68b9-11e7-88b3-bc7479060195.png" width="50%">
 <img src="https://user-images.githubusercontent.com/18415304/28200005-72dee2ee-68a4-11e7-8c0e-db5dc7b23288.png" width="50%">
