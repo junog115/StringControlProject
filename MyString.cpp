@@ -36,6 +36,12 @@ CMyString& CMyString::operator= (const CMyString &rhs)
     return *this;
 }
 
+CMyString::operator char*(void) const
+{
+    cout << "CMyString() char* 형 변환자" << endl;
+    return this->m_pszData;
+}
+
 void CMyString::SetString(const char* pszParam)
 {
     Release();

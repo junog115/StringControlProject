@@ -2,6 +2,11 @@
 #include "MyString.h"
 using namespace std;
 
+void TestFunc(const CMyString &strParam)
+{
+    cout << static_cast<char*> (strParam) << endl;
+}
+
 int main() {
     cout << "main() Strart!" << endl;
 
@@ -20,6 +25,10 @@ int main() {
     strNewData.SetString("");
     strNewData = strData;
     cout << strNewData.GetString() << endl;
+
+    cout << endl << "char* 형 변환자" << endl;
+    TestFunc(strData);
+
 
     cout << endl << "main() end!" << endl;
 

@@ -15,6 +15,7 @@ public:     // Constructor & Destructor
 
 public:     // Operator
     CMyString& operator=(const CMyString &);
+    explicit operator char*(void) const;
 
 private:
     int m_nLength;
