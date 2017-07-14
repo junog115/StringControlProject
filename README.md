@@ -34,7 +34,7 @@ My first C++ project
 #### Add & Change Function     
 --------------------------
   1. change GetString() to const function 
-  2. Add 복사 생성자
+  2. Add 복사 생성자
 -----------------------------------------
   
 ### main 함수 모습 & 실행 결과 
