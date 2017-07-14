@@ -2,9 +2,16 @@
 #include "MyString.h"
 using namespace std;
 
-void TestFunc(const CMyString &strParam)
+void TestFunc1(const CMyString &strParam)
 {
     cout << static_cast<char*> (strParam) << endl;
+}
+
+CMyString TestFunc2(void)
+{
+    CMyString a("TestFunc2()");
+
+    return a;
 }
 
 int main() {
@@ -27,11 +34,14 @@ int main() {
     cout << strNewData.GetString() << endl;
 
     cout << endl << "char* 형 변환자" << endl;
-    TestFunc(strData);
+    TestFunc1(strData);
 
     cout << endl << "Conversion constructor" << endl;
     // TestFunc("Hello!!"); have to error
-    TestFunc(CMyString("Hello!"));
+    TestFunc1(CMyString("Hello!"));
+
+    cout << endl << "move semantics" << endl;
+    strNewData = TestFunc2();
 
     cout << endl << "main() end!" << endl;
 
