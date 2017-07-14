@@ -26,10 +26,36 @@ CMyString::CMyString(const char *pszParam)
     this->SetString(pszParam);
 }
 
+CMyString::CMyString(CMyString &&rhs)
+{
+    cout << "CMyString() 이동 생성자 호출" << endl;
+
+    this->m_pszData = rhs.m_pszData;
+    this->m_nLength = rhs.m_nLength;
+
+    rhs.m_nLength = 0;
+    rhs.m_pszData = nullptr;
+}
+
 CMyString::~CMyString()
 {
     cout << "CMyString() 소멸자 호출" << endl;
     Release();
+}
+
+CMyString& CMyString::operator=(CMyString &&rhs)
+{
+    cout << "CMyString() move semantic 대입 연산자 호출" << endl;
+
+    if(this != &rhs)
+    {
+        this->m_pszData = rhs.m_pszData;
+        this->m_nLength = rhs.m_nLength;
+
+        rhs.m_nLength = 0;
+        rhs.m_pszData = nullptr;
+    }
+    return *this;
 }
 
 CMyString& CMyString::operator= (const CMyString &rhs)
@@ -47,6 +73,8 @@ CMyString::operator char*(void) const
     cout << "CMyString() char* 형 변환자" << endl;
     return this->m_pszData;
 }
+
+
 
 void CMyString::SetString(const char* pszParam)
 {

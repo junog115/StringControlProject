@@ -11,10 +11,12 @@ public:     // Constructor & Destructor
     CMyString();    // Default Constructor
     CMyString(const CMyString &);   // 복사 Constructor
     explicit CMyString(const char *);    // 변환 Constructor
+    CMyString(CMyString &&);    // move Constructor
 
     ~CMyString();       // Destructor
 
 public:     // Operator
+    CMyString& operator=(CMyString &&);
     CMyString& operator=(const CMyString &);
     explicit operator char*(void) const;
 
