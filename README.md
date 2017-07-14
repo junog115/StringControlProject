@@ -29,9 +29,14 @@ My first C++ project
   - void Release(void);
     - m_pszData가 할당한 메모리를 해제
     - SetString() 호출 이전에 Release()를 호출할 수 있다는 점을 고려해야한다. 
-    
+  
+  
+#### Add & Change Function     
+--------------------------
+  1. change GetString() to const function 
+  2. Add 복사 생성자
 -----------------------------------------
-    
+  
 ### main 함수 모습 & 실행 결과 
 <img src="https://user-images.githubusercontent.com/18415304/28200003-70f6bcae-68a4-11e7-8b71-de7a72168693.png" width="50%">
 <img src="https://user-images.githubusercontent.com/18415304/28200005-72dee2ee-68a4-11e7-8c0e-db5dc7b23288.png" width="50%">
