@@ -17,9 +17,11 @@ int main() {
     cout << strNewData.GetString() << endl << endl;
 
     cout << "단순 대입 연산자" << endl;
-    
+    strNewData.SetString("");
+    strNewData = strData;
+    cout << strNewData.GetString() << endl;
 
-    cout << "main() end!" << endl;
+    cout << endl << "main() end!" << endl;
 
     return 0;
 }

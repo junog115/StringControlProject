@@ -7,11 +7,14 @@
 
 
 class CMyString {
-public:
+public:     // Constructor & Destructor
     CMyString();
-    CMyString(const CMyString &rhs);
+    CMyString(const CMyString &);
 
     ~CMyString();
+
+public:     // Operator
+    CMyString& operator=(const CMyString &);
 
 private:
     int m_nLength;

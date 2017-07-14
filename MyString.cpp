@@ -26,6 +26,16 @@ CMyString::~CMyString()
     Release();
 }
 
+CMyString& CMyString::operator= (const CMyString &rhs)
+{
+    cout << "CMyString() 단순 대입 연산자 호출" << endl;
+    if(this != &rhs)
+    {
+        this->SetString(rhs.GetString());
+    }
+    return *this;
+}
+
 void CMyString::SetString(const char* pszParam)
 {
     Release();
