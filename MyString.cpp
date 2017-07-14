@@ -26,6 +26,17 @@ CMyString::CMyString(const char *pszParam)
     this->SetString(pszParam);
 }
 
+CMyString::CMyString(CMyString &&rhs)
+{
+    cout << "CMyString() 이동 생성자 호출" << endl;
+
+    this->m_pszData = rhs.m_pszData;
+    this->m_nLength = rhs.m_nLength;
+
+    rhs.m_nLength = 0;
+    rhs.m_pszData = NULL;
+}
+
 CMyString::~CMyString()
 {
     cout << "CMyString() 소멸자 호출" << endl;
