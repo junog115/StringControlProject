@@ -12,6 +12,13 @@ int main() {
     strData.SetString("World!");
     cout << strData.GetString() << endl << endl;
 
+    cout << "복사 생성자 생성" << endl;
+    CMyString strNewData(strData);
+    cout << strNewData.GetString() << endl << endl;
+
+    cout << "단순 대입 연산자" << endl;
+    
+
     cout << "main() end!" << endl;
 
     return 0;

@@ -9,6 +9,8 @@
 class CMyString {
 public:
     CMyString();
+    CMyString(const CMyString &rhs);
+
     ~CMyString();
 
 private:

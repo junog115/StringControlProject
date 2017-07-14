@@ -11,6 +11,15 @@ CMyString::CMyString()
     cout << "CMyString() 생성자 호출" << endl;
 
 }
+
+CMyString::CMyString(const CMyString &rhs)
+    : m_nLength(0), m_pszData(nullptr)
+{
+    cout << "CMyString() 복사 생성자 호출" << endl;
+    this->SetString(rhs.GetString());
+}
+
+
 CMyString::~CMyString()
 {
     cout << "CMyString() 소멸자 호출" << endl;
