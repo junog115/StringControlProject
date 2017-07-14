@@ -32,10 +32,16 @@ My first C++ project
     
 #### Add & Change Function     
 --------------------------
-  1. change GetString() to const function 
-    
+  1. change GetString() to const function  
+  2. Add CMyString(const CMyString &);              -복사 생성자
+  3. Add CMyString& operator=(const CMyString &);   -클래스 단순 대입 연산자 
+  4. Add explicit CMyString(const char *);          -변환 생성자
+  5. Add explicit operator char*(void) const;       -char* 형변환자
+  6. CMyString(CMyString &&);                       -이동 생성자
+  7. CMyString& operator=(CMyString &&);            -클래스 이동 대입 연산자
 
 ------------------------------------------
 ### main 함수 모습 & 실행 결과 
+<img src="https://user-images.githubusercontent.com/18415304/28204581-8289c082-68b9-11e7-9f8e-487bd2076d31.png" width="50%">
 <img src="https://user-images.githubusercontent.com/18415304/28204579-80ce846c-68b9-11e7-88b3-bc7479060195.png" width="50%">
-<img src="https://user-images.githubusercontent.com/18415304/28200005-72dee2ee-68a4-11e7-8c0e-db5dc7b23288.png" width="50%">
+
