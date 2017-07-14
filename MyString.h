@@ -16,6 +16,7 @@ public:     // Constructor & Destructor
     ~CMyString();       // Destructor
 
 public:     // Operator
+    CMyString& operator=(CMyString &&);
     CMyString& operator=(const CMyString &);
     explicit operator char*(void) const;
 
