@@ -19,6 +19,12 @@ CMyString::CMyString(const CMyString &rhs)
     this->SetString(rhs.GetString());
 }
 
+CMyString::CMyString(const char *pszParam)
+    : m_nLength(0), m_pszData(nullptr)
+{
+    cout << "CMyString() 변환 생성자 호출" << endl;
+    this->SetString(pszParam);
+}
 
 CMyString::~CMyString()
 {

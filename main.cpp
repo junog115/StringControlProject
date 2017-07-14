@@ -8,7 +8,7 @@ void TestFunc(const CMyString &strParam)
 }
 
 int main() {
-    cout << "main() Strart!" << endl;
+    cout << "main() Start!" << endl;
 
     cout << "CMyString Class Instance 생성" << endl;
     CMyString strData;

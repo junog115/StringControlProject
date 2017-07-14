@@ -8,10 +8,11 @@
 
 class CMyString {
 public:     // Constructor & Destructor
-    CMyString();
-    CMyString(const CMyString &);
+    CMyString();    // Default Constructor
+    CMyString(const CMyString &);   // 복사 Constructor
+    explicit CMyString(const char *);    // 변환 Constructor
 
-    ~CMyString();
+    ~CMyString();       // Destructor
 
 public:     // Operator
     CMyString& operator=(const CMyString &);
