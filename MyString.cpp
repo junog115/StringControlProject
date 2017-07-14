@@ -38,7 +38,7 @@ void CMyString::SetString(const char* pszParam)
 
 }
 
-const char* CMyString::GetString(void)
+const char* CMyString::GetString(void) const
 {
     return m_pszData;
 }
